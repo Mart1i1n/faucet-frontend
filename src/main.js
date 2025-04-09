@@ -30,3 +30,5 @@ async function requestClaim() {
     status.textContent = "❌ 出错了：" + err.message;
   }
 }
+
+window.requestClaim = requestClaim;
