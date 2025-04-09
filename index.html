@@ -5,9 +5,55 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zero Barrier Faucet</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: "Segoe UI", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #card {
+        background-color: white;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        width: 300px;
+      }
+      h1 {
+        font-size: 22px;
+        margin-bottom: 24px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        padding: 12px 24px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      #status {
+        margin-top: 20px;
+        color: #333;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="card">
+      <h1>💧 Zero Barrier Faucet</h1>
+      <button onclick="requestClaim()">一键领取 0.1 ETH</button>
+      <p id="status"></p>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

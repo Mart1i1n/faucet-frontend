@@ -1,15 +1,6 @@
 import { ethers } from "ethers";
 
-const app = document.getElementById("app");
-
-const button = document.createElement("button");
-button.textContent = "💧 一键领取 0.5 ETH";
-button.onclick = requestClaim;
-
-const status = document.createElement("p");
-
-app.appendChild(button);
-app.appendChild(status);
+const status = document.getElementById("status");
 
 async function requestClaim() {
   try {
@@ -24,7 +15,7 @@ async function requestClaim() {
     const message = "I want to claim test ETH";
     const signature = await signer.signMessage(message);
 
-    status.textContent = "⏳ 请求发币中...";
+    status.textContent = "⏳ 正在请求领取 ETH...";
 
     const response = await fetch(import.meta.env.VITE_API_URL + "/api/claim", {
       method: "POST",
